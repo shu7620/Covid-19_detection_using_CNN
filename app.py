@@ -9,9 +9,9 @@ from werkzeug.utils import secure_filename
 # Initialize Flask app
 app = Flask(__name__)
 
-# Load your pre-trained model and label encoder
-model = load_model('models/CNN_Covid19_Xray_Version.h5')  # Replace with your model path
-le = pickle.load(open("models/Label_encoder.pkl", 'rb'))  # Load the label encoder
+#Load your pre-trained model and label encoder
+model= load_model(r'C:\Users\shubh\New folder\Projects\Covid19_Radiotherapy\models\CNN_Covid19_Xray_Version.h5')
+le=pickle.load(open(r'C:\Users\shubh\New folder\Projects\Covid19_Radiotherapy\models\Label_encoder.pkl'))
 
 # Path to store uploaded images
 UPLOAD_FOLDER = 'uploads'
@@ -66,4 +66,5 @@ def camera():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
